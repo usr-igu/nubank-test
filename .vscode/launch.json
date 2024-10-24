@@ -4,19 +4,73 @@
             "type": "lldb",
             "request": "launch",
             "args": [],
-            "cwd": "${workspaceFolder:parse-json}",
+            "cwd": "${workspaceFolder:nubank-test}",
             "name": "Debug parse-json",
-            "program": "${workspaceFolder:parse-json}/.build/debug/parse-json",
+            "program": "${workspaceFolder:nubank-test}/.build/debug/parse-json",
             "preLaunchTask": "swift: Build Debug parse-json"
         },
         {
             "type": "lldb",
             "request": "launch",
             "args": [],
-            "cwd": "${workspaceFolder:parse-json}",
+            "cwd": "${workspaceFolder:nubank-test}",
             "name": "Release parse-json",
-            "program": "${workspaceFolder:parse-json}/.build/release/parse-json",
+            "program": "${workspaceFolder:nubank-test}/.build/release/parse-json",
             "preLaunchTask": "swift: Build Release parse-json"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:nubank-test}",
+            "name": "Debug taxes-calculator",
+            "program": "${workspaceFolder:nubank-test}/.build/debug/taxes-calculator",
+            "preLaunchTask": "swift: Build Debug taxes-calculator"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:nubank-test}",
+            "name": "Release taxes-calculator",
+            "program": "${workspaceFolder:nubank-test}/.build/release/taxes-calculator",
+            "preLaunchTask": "swift: Build Release taxes-calculator"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:nubank-test}",
+            "name": "Debug taxes",
+            "program": "${workspaceFolder:nubank-test}/.build/debug/taxes",
+            "preLaunchTask": "swift: Build Debug taxes"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:nubank-test}",
+            "name": "Release taxes",
+            "program": "${workspaceFolder:nubank-test}/.build/release/taxes",
+            "preLaunchTask": "swift: Build Release taxes"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:nubank-test}",
+            "name": "Debug Taxes",
+            "program": "${workspaceFolder:nubank-test}/.build/debug/Taxes",
+            "preLaunchTask": "swift: Build Debug Taxes"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:nubank-test}",
+            "name": "Release Taxes",
+            "program": "${workspaceFolder:nubank-test}/.build/release/Taxes",
+            "preLaunchTask": "swift: Build Release Taxes"
         }
     ]
 }

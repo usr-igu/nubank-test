@@ -1,6 +1,6 @@
 import Foundation
 
-struct Operation: Codable, Equatable {
+struct StockOperation: Codable, Equatable {
     let operation: String
     let unitCost: Int
     let quantity: Int
@@ -11,7 +11,7 @@ struct Operation: Codable, Equatable {
         case quantity
     }
 
-    static func == (lhs: Operation, rhs: Operation) -> Bool {
+    static func == (lhs: StockOperation, rhs: StockOperation) -> Bool {
         return lhs.operation == rhs.operation && lhs.unitCost == rhs.unitCost
             && lhs.quantity == rhs.quantity
     }

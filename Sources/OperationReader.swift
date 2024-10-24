@@ -16,11 +16,15 @@ final class OperationReader: IteratorProtocol, Sequence {
         self.handle = handle
     }
 
+    init(handle: FileHandle) {
+        self.handle = handle
+    }
+
     deinit {
         self.handle.closeFile()
     }
 
-    func next() -> [Operation]? {
+    func next() -> [StockOperation]? {
         while true {
             // Try to find a complete line in the current buffer
             if let index = buffer.firstIndex(of: lf) {
@@ -29,8 +33,9 @@ final class OperationReader: IteratorProtocol, Sequence {
                 buffer.removeSubrange(0...index)
 
                 if !line.isEmpty {
-                    return try? decoder.decode([Operation].self, from: line)
+                    return try? decoder.decode([StockOperation].self, from: line)
                 }
+
                 continue
             }
 
@@ -40,8 +45,8 @@ final class OperationReader: IteratorProtocol, Sequence {
             if chunk.isEmpty {
                 // End of file reached - process remaining buffer if any
                 if !buffer.isEmpty {
-                    if let operations = try? decoder.decode([Operation].self, from: buffer) {
-                        buffer.removeAll()
+                    if let operations = try? decoder.decode([StockOperation].self, from: buffer) {
+                        buffer.removeAll(keepingCapacity: true)
                         return operations
                     }
                 }
